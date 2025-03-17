@@ -17,5 +17,6 @@ spec:
       containers:
       - name: amazon-container
         image: aravindh07/amazon:latest  # Placeholder - will be replaced by Jenkins
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
