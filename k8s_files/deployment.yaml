@@ -1,23 +1,21 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pandacloud-app
+  name: amazon-deployment
   labels:
-    app: pandacloud-app
+    app: amazon
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pandacloud-app
+      app: amazon
   template:
     metadata:
       labels:
-        app: pandacloud-app
+        app: amazon
     spec:
       containers:
-      - name: pandacloud-container
-        image: 767398145000.dkr.ecr.us-east-1.amazonaws.com/amazon-prime:8
+      - name: amazon-container
+        image: aravindh07/amazon:latest  # Placeholder - will be replaced by Jenkins
         ports:
         - containerPort: 3000
-...
